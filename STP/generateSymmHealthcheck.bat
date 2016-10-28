@@ -1,0 +1,1 @@
+"C:\Program Files\EMC Corporation\SymmMerge4\SymmMerge.exe" --action reports --dir . --template "C:\Users\ghiorc\Documents\Presentations\VMAX Healthcheck Template.pptx" 

@@ -1,0 +1,53 @@
+# Sample Metrics Filer file
+# Contains metrics to be filtered to include into report generation.
+# Format is MetricCategory::Metric (System::reads per sec)
+# Only one metric entry per line.
+# Lines which begin with the # symbol or blank lines are ignored.
+#
+System::symid
+System::reads per sec
+System! ::writes per sec
+System::Kbytes read per sec
+System::Kbytes written per sec
+
+Devices::device name
+Devices::reads per sec
+Devices::writes per sec
+Devices::Kbytes read per sec
+Devices::Kbytes written per sec
+
+Dir-Fibre::director number
+Dir-Fibre::reads per sec
+Dir-Fibre::writes per sec
+Dir-Fibre::system write pending events per sec
+Dir-Fibre::device write! pending events per sec
+
+Dir-DA::director number
+Dir-DA::reads per sec
+Dir-DA::writes per sec
+Dir-DA::system write pending events per sec
+Dir-DA::device write pending events per sec
+Dir-DA::tracks not used per sec! 
+Dir-DA::tracks used per sec
+
+Dir-RA1::director number
+Dir-RA1::read requests per sec
+Dir-RA1::write requests per sec
+Dir-RA1::Kbytes received per sec
+Dir-RA1::Kbytes sent per sec
+
+Disks::device name
+Disks::read commands per sec
+Disks::write commands per sec
+Disks::Kbytes read per sec
+Disks::Kbytes written per sec
+
+Dir-Port::port name
+Dir-Port::ios per sec
+Dir-Port::throughput in Kbytes per sec
+
+RDFAStats::ra group number
+RDFAStats::rdfa active indicator
+RDFAStats::local write pending c! ount
+RDFAStats::host write ios per sec 
+RDFAStats::host write Mbytes per second

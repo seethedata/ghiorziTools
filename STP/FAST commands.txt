@@ -1,0 +1,31 @@
+
+Show the Symms that are in the API file
+symcfg list
+ 
+Show the FAST demand report
+symfast -sid 2377 list -demand -vp -tech all
+ 
+Show FAST Policies
+symfast list -sid 2377 -fp -v
+
+Show FAST Settings
+symfast list -sid 2377 -control_parms
+ 
+Show Percent Full of Pools
+symcfg list -sid 2377 -pool -thin -detail -gb
+
+Show Pool config parameters (including pool-level reserve capacity)
+symcfg show -sid 2377 -thin -pool <POOLNAME> -detail
+
+Show how much thin allocation each device has
+symcfg list -sid 2377 -tdev -gb
+
+
+Show how devices are tiered
+symcfg list -sid 2377 -tdev -detail -gb
+
+Show storage group compliance report (negative means out of compliance)
+symfast list -sid 2377 -association -demand
+
+Show devices that are clones of devices in a storage group
+symdev list  -sg pdbbaan1_SG -v | grep "Target" | grep -v "N/A" | sed "s/.*: //g" 

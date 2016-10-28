@@ -1,0 +1,2 @@
+Print Storage Group Size in GB
+symsg -sid 5838 show  s_vpds0132_33a_sas_temp | grep TDEV | sed "s/.*\s//g" | awk "{sum+=$1} END {print sum/1024}"

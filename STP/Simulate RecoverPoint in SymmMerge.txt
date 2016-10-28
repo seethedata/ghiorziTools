@@ -1,0 +1,7 @@
+For RecoverPoint source:  
+We add for each write (hit or miss), a read hit.
+
+For RecoverPoint target:
+We also add workload but this time it is a little more complicated and it depends on the size of the writes but to simplify for 256K Writes:
+Writes Misses With RP = Writes Misses without RP + 3 x (Writes Hits + Writes Misses)
+Read Misses With RP = Reads Misses Without RP + 2 x (Writes Hits + Writes Misses)
