@@ -1,4 +1,4 @@
-	#!/usr/bin/perl
+#!/usr/bin/perl
 #
 # NAR Analysis.pl
 #
@@ -249,10 +249,11 @@ sub processPoolStats {
 		# Create output files
 		#################################
 		for $pool (keys %listOfPools) {
-			$pool=~s/\//-/g;
+			$poolFileName=$pool;
+			$poolFileName=~s/\//-/g;
 			$fileHandle=$pool . "POOLFILE";
-			$fileName=$pool . "-privateRaidGroups.csv";
-
+			$fileName=$poolFileName . "-privateRaidGroups.csv";
+			
 			if (! -e $fileName ) {
 				open ($fileHandle, ">$fileName") or die "Unable to write file $fileName\n";
 				print $fileHandle "Object Name,Poll Time,Utilization (%),Queue Length,Response Time (ms),Total Bandwidth (MB/s),Total Throughput (IO/s),Read Bandwidth (MB/s),Read Size (KB),Read Throughput (IO/s),Write Bandwidth (MB/s),Write Size (KB),Write Throughput (IO/s),Average Seek Distance (GB)\n";
@@ -296,9 +297,10 @@ sub processPoolStats {
 		# Create output files
 		#################################
 		for $pool (keys %listOfPools) {
-			$pool=~s/\//-/g;
+			$poolFileName=$pool;
+			$poolFileName=~s/\//-/g;
 			$fileHandle=$pool . "POOLFILE";
-			$fileName=$pool . "-disks.csv";
+			$fileName=$poolFileName . "-disks.csv";
 
 			if (! -e $fileName ) {
 				open ($fileHandle, ">$fileName") or die "Unable to write file $fileName\n";
@@ -345,9 +347,10 @@ sub processPoolStats {
 		# Create output files
 		#################################
 		for $pool (keys %listOfPools) {
-			$pool=~s/\//-/g;
+			$poolFileName=$pool;
+			$poolFileName=~s/\//-/g;
 			$fileHandle=$pool . "POOLFILE";
-			$fileName=$pool . "-luns.csv";
+			$fileName=$poolFileName . "-luns.csv";
 
 			if (! -e $fileName ) {
 				open ($fileHandle, ">$fileName") or die "Unable to write file $fileName\n";
