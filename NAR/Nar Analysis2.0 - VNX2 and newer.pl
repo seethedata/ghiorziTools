@@ -249,6 +249,7 @@ sub processPoolStats {
 		# Create output files
 		#################################
 		for $pool (keys %listOfPools) {
+			$pool=~s/\//-/g;
 			$fileHandle=$pool . "POOLFILE";
 			$fileName=$pool . "-privateRaidGroups.csv";
 
@@ -295,6 +296,7 @@ sub processPoolStats {
 		# Create output files
 		#################################
 		for $pool (keys %listOfPools) {
+			$pool=~s/\//-/g;
 			$fileHandle=$pool . "POOLFILE";
 			$fileName=$pool . "-disks.csv";
 
@@ -343,6 +345,7 @@ sub processPoolStats {
 		# Create output files
 		#################################
 		for $pool (keys %listOfPools) {
+			$pool=~s/\//-/g;
 			$fileHandle=$pool . "POOLFILE";
 			$fileName=$pool . "-luns.csv";
 
