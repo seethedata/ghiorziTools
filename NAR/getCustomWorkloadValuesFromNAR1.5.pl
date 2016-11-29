@@ -4,6 +4,8 @@
 #
 # This script outputs a summary of a set of NAR data that
 # can be used to create a custom workload in Symmerge.
+# NOTE: This script does not work with pool-based LUNs. It 
+# only works with classic RAID group LUNs.
 ##############################################################
 
 
